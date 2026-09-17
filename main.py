@@ -1,4 +1,4 @@
-from embeddings.text_embedding_hf import TextEmbeddings
+from embeddings.text_embedding_hf import HuggingFaceTextEmbeddings
 from vector_store.in_memory_store import InMemoryStore
 
 if __name__ == '__main__':
@@ -31,7 +31,7 @@ if __name__ == '__main__':
         }
     ]
 
-    text_embedding = TextEmbeddings()
+    text_embedding = HuggingFaceTextEmbeddings()
     in_memory_store = InMemoryStore()
     doc_with_embeddings = text_embedding.generate_embeddings(docs)
     # text_embedding.write_to_file(doc_embeddings)

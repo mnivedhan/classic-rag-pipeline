@@ -3,7 +3,7 @@ from typing import List
 
 from sentence_transformers import SentenceTransformer
 
-class TextEmbeddings:
+class HuggingFaceTextEmbeddings:
     def __init__(self, model = None):
         self.model = model or SentenceTransformer("BAAI/bge-base-en-v1.5")
 
